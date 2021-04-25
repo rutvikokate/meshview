@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meshview</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <LINK rel="stylesheet" href="meshviewer.css" type="text/css">
+    <LINK rel="stylesheet" href="lib/jquery-ui/jquery-ui.min.css" type="text/css">
+        <script type="text/javascript">
+            meshviewer({
+              'objFile' : 'examples/cow/mesh.obj',
+              'mtlFile' : 'examples/cow/mesh.mtl', 
+              'container':'#viewer', 
+              'format':'obj'});
+            </script>
+           
+</head>
+
+<body>
+<div id="leftMenu">
+    <div id="info">
+        <a href="javascript:jQuery('#viewer').empty()">Three.js OBJ viewer</a>
+    </div>
+    <ul>Exemples OBJ :
+       
+        <li><a href="javascript:meshviewer({'meshFile' : 'examples/cow/mesh.obj','mtlFile' : 'examples/cow/mesh.mtl', 'container':'#viewer', 'format':'obj'})">Cow</a></li>
+       <li><a href="javascript: meshviewer({
+          'meshFile' : 'examples/face/face.obj',
+          'mtlFile' : 'examples/face/face.mtl', 
+          'container':'#viewer', 
+          'format':'obj'})">Face</a></li>
+      
+      
+    </ul>
+   
+</div>
+
+<div id="mainViewer">
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="lib/threejs/three.min.js"></script>
+
+    <script src="lib/threejs/loaders/BinaryLoader.js"></script>
+    <script src="lib/threejs/loaders/MTLLoader.js"></script>
+    <script src="lib/threejs/loaders/OBJMTLLoader.js"></script>
+
+    <script src="lib/threejs/loaders/UTF8Loader.js"></script>
+
+    <script src="lib/threejs/loaders/ctm/lzma.js"></script>
+    <script src="lib/threejs/loaders/ctm/CTMLoader.js"></script>
+
+    <script src="lib/threejs/Detector.js"></script>
+    <script src="lib/threejs/TrackballControls.js"></script>
+    <script src="lib/threejs/libs/stats.min.js"></script>
+
+    <script id="objectView" src="meshviewer.js"></script>
+
+<script type="text/javascript">
+        meshviewer({
+          'meshFile' : 'examples/face/face.obj',
+          'mtlFile' : 'examples/face/face.mtl', 
+          'container':'#viewer', 
+          'format':'obj'});
+        </script>
+
+    <div id="viewer"></div>
+    <div id="progress"></div>
+    <div id="timer"></div>
+    <div id="weight"></div>
+
+</body>
+</html>
